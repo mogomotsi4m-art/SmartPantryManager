@@ -1,0 +1,21 @@
+
+# Gradle and build outputs
+.gradle/
+**/build/
+
+# Local Android SDK path
+local.properties
+
+# Android Studio user-specific settings
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+
+# Compiled files
+*.class
+
+# Local secrets and signing keys
+*.jks
+*.keystore
