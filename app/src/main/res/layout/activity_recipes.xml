@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Suggested Recipes" android:textSize="25sp" android:textStyle="bold"/>
+<TextView android:id="@+id/recipeMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp"/>
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/recipesRecycler" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+<Button android:id="@+id/backButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back to pantry"/></LinearLayout>
