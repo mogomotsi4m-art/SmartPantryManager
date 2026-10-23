@@ -1,7 +1,41 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="20dp">
-<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Settings / Profile" android:textSize="25sp" android:textStyle="bold"/>
-<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Preferred measurement unit"/>
-<Spinner android:id="@+id/unitSpinner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-<CheckBox android:id="@+id/expiryCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Show expiry reminders"/>
-<Button android:id="@+id/saveSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save settings"/>
-<Button android:id="@+id/settingsBack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back"/></LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings / Profile"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preferred measurement unit" />
+
+    <Spinner
+        android:id="@+id/unitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/expiryCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show expiry reminders" />
+
+    <Button
+        android:id="@+id/saveSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save settings" />
+
+    <Button
+        android:id="@+id/settingsBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+</LinearLayout>

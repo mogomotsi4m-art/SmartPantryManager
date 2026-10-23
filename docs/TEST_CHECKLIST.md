@@ -1,5 +1,7 @@
 # Manual Test Checklist
+
 Record actual results before submission.
+
 - [ ] App launches on physical device
 - [ ] Empty pantry state readable
 - [ ] Add ingredient with valid values

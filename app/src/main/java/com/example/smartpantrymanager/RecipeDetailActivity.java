@@ -1,6 +1,32 @@
 package com.example.smartpantrymanager;
-import android.os.Bundle;import android.widget.TextView;import androidx.appcompat.app.AppCompatActivity;import java.util.*;
-public class RecipeDetailActivity extends AppCompatActivity{
- @Override protected void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_recipe_detail);long id=getIntent().getLongExtra("recipeId",-1);DatabaseHelper db=new DatabaseHelper(this);Recipe r=db.getRecipe(id);TextView title=findViewById(R.id.detailTitle),ings=findViewById(R.id.detailIngredients),inst=findViewById(R.id.detailInstructions);
- if(r==null){title.setText("Recipe not found");}else{title.setText(r.name);StringBuilder s=new StringBuilder("Required ingredients:\n");for(RecipeIngredient x:db.getRecipeIngredients(id))s.append("• ").append(x.name).append(" — ").append(String.format(Locale.getDefault(),"%.2f",x.quantity)).append(" ").append(x.unit).append("\n");ings.setText(s.toString());inst.setText("Preparation:\n"+r.instructions);}findViewById(R.id.detailBack).setOnClickListener(v->finish());}
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.*;
+
+public class RecipeDetailActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle b) {
+        super.onCreate(b);
+        setContentView(R.layout.activity_recipe_detail);
+        SafeArea.apply(this);
+        long id = getIntent().getLongExtra("recipeId", -1);
+        DatabaseHelper db = new DatabaseHelper(this);
+        Recipe r = db.getRecipe(id);
+        TextView title = findViewById(R.id.detailTitle), ings = findViewById(R.id.detailIngredients), inst = findViewById(R.id.detailInstructions);
+        if (r == null) {
+            title.setText("Recipe not found");
+        } else {
+            title.setText(r.name);
+            StringBuilder s = new StringBuilder("Required ingredients:\n");
+            for (RecipeIngredient x : db.getRecipeIngredients(id))
+                s.append("• ").append(x.name).append(" — ").append(String.format(Locale.getDefault(), "%.2f", x.quantity)).append(" ").append(x.unit).append("\n");
+            ings.setText(s.toString());
+            inst.setText("Preparation:\n" + r.instructions);
+        }
+        findViewById(R.id.detailBack).setOnClickListener(v -> finish());
+    }
 }
